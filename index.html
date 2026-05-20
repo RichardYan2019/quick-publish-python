@@ -78,6 +78,7 @@ body{font-family:'PingFang SC','Microsoft YaHei',sans-serif;background:#0a1628;c
   <div id="cp"><div id="cq"></div><div id="cbs"></div></div>
   <div id="ov"><div id="ovc">✕</div><div id="ovcon"></div></div>
   <div id="ep"></div>
+<div id="cover" style="position:fixed;inset:0;z-index:400;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:52%;cursor:pointer"><div style="background:rgba(0,0,0,.55);border-radius:12px;padding:16px 24px;text-align:center;max-width:300px"><div style="font-size:13px;color:#f0c040;letter-spacing:2px;margin-bottom:6px">懂球帝 世界杯史话</div><div style="font-size:22px;font-weight:bold;margin-bottom:8px">足球回家 1966</div><div style="font-size:13px;color:#ccc;margin-bottom:16px">点击任意处开始</div><div style="font-size:11px;color:rgba(255,255,255,.4);animation:blink 1.5s infinite">▶ TAP TO START</div></div></div>
 </div>
 <script>
 var idx=0,score=0,clog=[],typing=null,locked=false;
@@ -270,8 +271,12 @@ var script=[
 {type:'card',title:'历史档案·雷米特杯的命运',text:'真正的雷米特杯在银行金库保存至移交墨西哥（1970年世界杯主办国）。那座复制品被带到英国各地巡回展出，观众不知道看到的是赝品。斯泰尔斯和韦斯顿守口如瓶数十年。',teaser:'游戏结束，看看你对这段历史的理解有多深……'},
 {type:'ending'}
 ];
-advance();
-
+// wait for first click
+var cover = document.getElementById('cover');
+cover.addEventListener('click', function() {
+  cover.style.display = 'none';
+  advance();
+});
 </script>
 </body>
 </html>
