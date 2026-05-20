@@ -78,7 +78,12 @@ body{font-family:'PingFang SC','Microsoft YaHei',sans-serif;background:#0a1628;c
   <div id="cp"><div id="cq"></div><div id="cbs"></div></div>
   <div id="ov"><div id="ovc">✕</div><div id="ovcon"></div></div>
   <div id="ep"></div>
-<div id="cover" style="position:fixed;inset:0;z-index:400;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:52%;cursor:pointer"><div style="background:rgba(0,0,0,.55);border-radius:12px;padding:16px 24px;text-align:center;max-width:300px"><div style="font-size:13px;color:#f0c040;letter-spacing:2px;margin-bottom:6px">懂球帝 世界杯史话</div><div style="font-size:22px;font-weight:bold;margin-bottom:8px">足球回家 1966</div><div style="font-size:13px;color:#ccc;margin-bottom:16px">点击任意处开始</div><div style="font-size:11px;color:rgba(255,255,255,.4);animation:blink 1.5s infinite">▶ TAP TO START</div></div></div>
+<div id="cover" style="position:fixed;inset:0;z-index:400;cursor:pointer">
+  <!-- 左上角标签 -->
+  <div style="position:absolute;top:18px;left:16px;font-size:11px;color:rgba(255,255,255,.7);letter-spacing:2px;font-weight:400">懂球帝 · 世界杯史话</div>
+  <!-- 底部 TAP TO START -->
+  <div id="tap-cover" style="position:absolute;bottom:48px;left:0;right:0;text-align:center;font-size:13px;letter-spacing:4px;color:rgba(255,255,255,.85);font-weight:300;animation:blink 1.5s infinite">TAP TO START</div>
+</div>
 </div>
 <script>
 var idx=0,score=0,clog=[],typing=null,locked=false;
