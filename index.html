@@ -72,17 +72,15 @@ body{font-family:'PingFang SC','Microsoft YaHei',sans-serif;background:#0a1628;c
 </head>
 <body>
 <div id="app">
-  <div id="hud"><div id="hc">懂球帝 · 世界杯史话</div><div id="ht">足球回家 · 1966</div><div id="sbw"><div id="sb"></div></div></div>
+  <div id="hud" style="display:none"><div id="hc">懂球帝 · 世界杯史话</div><div id="ht">足球回家 · 1966</div><div id="sbw"><div id="sb"></div></div></div>
   <div id="bg"></div>
-  <div id="db"><div id="sp"></div><div id="dt">点击任意处开始</div><div id="th">点击继续 ▶</div></div>
+  <div id="db"><div id="sp"></div><div id="dt"></div><div id="th">点击继续 ▶</div></div>
   <div id="cp"><div id="cq"></div><div id="cbs"></div></div>
   <div id="ov"><div id="ovc">✕</div><div id="ovcon"></div></div>
   <div id="ep"></div>
 <div id="cover" style="position:fixed;inset:0;z-index:400;cursor:pointer">
-  <!-- 左上角标签 -->
-  <div style="position:absolute;top:18px;left:16px;font-size:11px;color:rgba(255,255,255,.7);letter-spacing:2px;font-weight:400">懂球帝 · 世界杯史话</div>
   <!-- 底部 TAP TO START -->
-  <div id="tap-cover" style="position:absolute;bottom:48px;left:0;right:0;text-align:center;font-size:13px;letter-spacing:4px;color:rgba(255,255,255,.85);font-weight:300;animation:blink 1.5s infinite">TAP TO START</div>
+  <div style="position:absolute;bottom:48px;left:0;right:0;text-align:center;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:2px;animation:blink 1.5s infinite">TAP TO START</div>
 </div>
 </div>
 <script>
@@ -279,7 +277,7 @@ var script=[
 // wait for first click
 var cover = document.getElementById('cover');
 cover.addEventListener('click', function() {
-  cover.style.display = 'none';
+  cover.style.display = 'none'; document.getElementById('hud').style.display = 'block';
   advance();
 });
 </script>
