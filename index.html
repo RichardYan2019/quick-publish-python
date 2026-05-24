@@ -169,6 +169,9 @@ document.getElementById('app').addEventListener('click',function(){
   if(cp.style.display==='flex')return;
   if(ov.style.display==='block')return;
   if(ep.style.display==='flex')return;
+  var cover=document.getElementById('cover'),intro=document.getElementById('intro');
+  if(cover&&cover.style.display!=='none')return;
+  if(intro&&intro.style.display!=='none')return;
   advance();
 });
 var script=[
